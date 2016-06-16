@@ -1,0 +1,253 @@
+2016-06-15 22:33:14 [::1][-][2uqvgi7ugli8c5ckuu72nucp67][error][yii\db\Exception] exception 'PDOException' with message 'SQLSTATE[HY000] [1045] Access denied for user 'yiiadmin'@'localhost' (using password: YES)' in /opt/lampp/htdocs/advanced/vendor/yiisoft/yii2/db/Connection.php:600
+Stack trace:
+#0 /opt/lampp/htdocs/advanced/vendor/yiisoft/yii2/db/Connection.php(600): PDO->__construct('mysql:host=loca...', 'yiiadmin', 'adminpass', NULL)
+#1 /opt/lampp/htdocs/advanced/vendor/yiisoft/yii2/db/Connection.php(542): yii\db\Connection->createPdoInstance()
+#2 /opt/lampp/htdocs/advanced/vendor/yiisoft/yii2/db/Connection.php(861): yii\db\Connection->open()
+#3 /opt/lampp/htdocs/advanced/vendor/yiisoft/yii2/db/Connection.php(848): yii\db\Connection->getMasterPdo()
+#4 /opt/lampp/htdocs/advanced/vendor/yiisoft/yii2/db/Schema.php(480): yii\db\Connection->getSlavePdo()
+#5 /opt/lampp/htdocs/advanced/vendor/yiisoft/yii2/db/Connection.php(757): yii\db\Schema->quoteValue('<span class="st...')
+#6 /opt/lampp/htdocs/advanced/vendor/yiisoft/yii2/db/Command.php(175): yii\db\Connection->quoteValue('<span class="st...')
+#7 /opt/lampp/htdocs/advanced/vendor/yiisoft/yii2/db/Command.php(869): yii\db\Command->getRawSql()
+#8 /opt/lampp/htdocs/advanced/vendor/yiisoft/yii2/db/Command.php(376): yii\db\Command->queryInternal('<span class="st...', '<span class="ke...')
+#9 /opt/lampp/htdocs/advanced/vendor/yiisoft/yii2/db/Query.php(247): yii\db\Command->queryOne()
+#10 /opt/lampp/htdocs/advanced/vendor/yiisoft/yii2/db/ActiveQuery.php(290): yii\db\Query->one('<span class="ke...')
+#11 /opt/lampp/htdocs/advanced/vendor/yiisoft/yii2/db/BaseActiveRecord.php(107): yii\db\ActiveQuery->one()
+#12 /opt/lampp/htdocs/advanced/common/models/User.php(83): yii\db\BaseActiveRecord::findOne('[<span class="s...')
+#13 /opt/lampp/htdocs/advanced/common/models/LoginForm.php(73): common\models\User::findByUsername('<span class="st...')
+#14 /opt/lampp/htdocs/advanced/common/models/LoginForm.php(44): common\models\LoginForm->getUser()
+#15 [internal function]: common\models\LoginForm->validatePassword('<span class="st...', '<span class="ke...')
+#16 /opt/lampp/htdocs/advanced/vendor/yiisoft/yii2/validators/InlineValidator.php(69): call_user_func('[<span class="t...', '<span class="st...', '<span class="ke...')
+#17 /opt/lampp/htdocs/advanced/vendor/yiisoft/yii2/validators/Validator.php(252): yii\validators\InlineValidator->validateAttribute(Object(common\models\LoginForm), '<span class="st...')
+#18 /opt/lampp/htdocs/advanced/vendor/yiisoft/yii2/base/Model.php(356): yii\validators\Validator->validateAttributes(Object(common\models\LoginForm), '[<span class="s...')
+#19 /opt/lampp/htdocs/advanced/common/models/LoginForm.php(58): yii\base\Model->validate()
+#20 /opt/lampp/htdocs/advanced/backend/controllers/SiteController.php(68): common\models\LoginForm->login()
+#21 [internal function]: backend\controllers\SiteController->actionLogin()
+#22 /opt/lampp/htdocs/advanced/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array('[<span class="t...', '[]')
+#23 /opt/lampp/htdocs/advanced/vendor/yiisoft/yii2/base/Controller.php(154): yii\base\InlineAction->runWithParams('[<span class="s...')
+#24 /opt/lampp/htdocs/advanced/vendor/yiisoft/yii2/base/Module.php(454): yii\base\Controller->runAction('<span class="st...', '[<span class="s...')
+#25 /opt/lampp/htdocs/advanced/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('<span class="st...', '[<span class="s...')
+#26 /opt/lampp/htdocs/advanced/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#27 /opt/lampp/htdocs/advanced/backend/web/index.php(18): yii\base\Application->run()
+#28 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[HY000] [1045] Access denied for user 'yiiadmin'@'localhost' (using password: YES)' in /opt/lampp/htdocs/advanced/vendor/yiisoft/yii2/db/Connection.php:547
+Stack trace:
+#0 /opt/lampp/htdocs/advanced/vendor/yiisoft/yii2/db/Connection.php(861): yii\db\Connection->open()
+#1 /opt/lampp/htdocs/advanced/vendor/yiisoft/yii2/db/Connection.php(848): yii\db\Connection->getMasterPdo()
+#2 /opt/lampp/htdocs/advanced/vendor/yiisoft/yii2/db/Schema.php(480): yii\db\Connection->getSlavePdo()
+#3 /opt/lampp/htdocs/advanced/vendor/yiisoft/yii2/db/Connection.php(757): yii\db\Schema->quoteValue('<span class="st...')
+#4 /opt/lampp/htdocs/advanced/vendor/yiisoft/yii2/db/Command.php(175): yii\db\Connection->quoteValue('<span class="st...')
+#5 /opt/lampp/htdocs/advanced/vendor/yiisoft/yii2/db/Command.php(869): yii\db\Command->getRawSql()
+#6 /opt/lampp/htdocs/advanced/vendor/yiisoft/yii2/db/Command.php(376): yii\db\Command->queryInternal('<span class="st...', '<span class="ke...')
+#7 /opt/lampp/htdocs/advanced/vendor/yiisoft/yii2/db/Query.php(247): yii\db\Command->queryOne()
+#8 /opt/lampp/htdocs/advanced/vendor/yiisoft/yii2/db/ActiveQuery.php(290): yii\db\Query->one('<span class="ke...')
+#9 /opt/lampp/htdocs/advanced/vendor/yiisoft/yii2/db/BaseActiveRecord.php(107): yii\db\ActiveQuery->one()
+#10 /opt/lampp/htdocs/advanced/common/models/User.php(83): yii\db\BaseActiveRecord::findOne('[<span class="s...')
+#11 /opt/lampp/htdocs/advanced/common/models/LoginForm.php(73): common\models\User::findByUsername('<span class="st...')
+#12 /opt/lampp/htdocs/advanced/common/models/LoginForm.php(44): common\models\LoginForm->getUser()
+#13 [internal function]: common\models\LoginForm->validatePassword('<span class="st...', '<span class="ke...')
+#14 /opt/lampp/htdocs/advanced/vendor/yiisoft/yii2/validators/InlineValidator.php(69): call_user_func('[<span class="t...', '<span class="st...', '<span class="ke...')
+#15 /opt/lampp/htdocs/advanced/vendor/yiisoft/yii2/validators/Validator.php(252): yii\validators\InlineValidator->validateAttribute(Object(common\models\LoginForm), '<span class="st...')
+#16 /opt/lampp/htdocs/advanced/vendor/yiisoft/yii2/base/Model.php(356): yii\validators\Validator->validateAttributes(Object(common\models\LoginForm), '[<span class="s...')
+#17 /opt/lampp/htdocs/advanced/common/models/LoginForm.php(58): yii\base\Model->validate()
+#18 /opt/lampp/htdocs/advanced/backend/controllers/SiteController.php(68): common\models\LoginForm->login()
+#19 [internal function]: backend\controllers\SiteController->actionLogin()
+#20 /opt/lampp/htdocs/advanced/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array('[<span class="t...', '[]')
+#21 /opt/lampp/htdocs/advanced/vendor/yiisoft/yii2/base/Controller.php(154): yii\base\InlineAction->runWithParams('[<span class="s...')
+#22 /opt/lampp/htdocs/advanced/vendor/yiisoft/yii2/base/Module.php(454): yii\base\Controller->runAction('<span class="st...', '[<span class="s...')
+#23 /opt/lampp/htdocs/advanced/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('<span class="st...', '[<span class="s...')
+#24 /opt/lampp/htdocs/advanced/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#25 /opt/lampp/htdocs/advanced/backend/web/index.php(18): yii\base\Application->run()
+#26 {main}
+Additional Information:
+
+2016-06-15 22:33:14 [::1][-][2uqvgi7ugli8c5ckuu72nucp67][info][application] $_GET = [
+    'r' => 'site/login'
+]
+
+$_POST = [
+    '_csrf' => 'NWlXRnVJMEJGBiA2HAAIB1sFBygvGFQDBAs1Ij85SDNBCBV/MQtfCg=='
+    'LoginForm' => [
+        'username' => 'holi'
+        'password' => 'holi'
+        'rememberMe' => '1'
+    ]
+    'login-button' => ''
+]
+
+$_COOKIE = [
+    'PHPSESSID' => '2uqvgi7ugli8c5ckuu72nucp67'
+    '_csrf' => '9b4c7dfda98eec689bba5a6d7a29a45cdaae89178b46186d7fd5dfadc3d65faaa:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"sowpiI8EnlPnZQdA1bbdJpxqtaB9DBoH\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__captcha/site/captcha' => 'qvnocog'
+    '__captcha/site/captchacount' => 1
+    '__returnUrl' => '/advanced/backend/web/'
+]
+
+$_SERVER = [
+    'UNIQUE_ID' => 'V2G7in8AAQEAABd2eREAAAAI'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '196'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_ORIGIN' => 'http://localhost'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_REFERER' => 'http://localhost/advanced/backend/web/index.php?r=site%2Flogin'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-419,es;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=2uqvgi7ugli8c5ckuu72nucp67; _csrf=9b4c7dfda98eec689bba5a6d7a29a45cdaae89178b46186d7fd5dfadc3d65faaa%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22sowpiI8EnlPnZQdA1bbdJpxqtaB9DBoH%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'LD_LIBRARY_PATH' => '/opt/lampp/lib:/opt/lampp/lib'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Unix) OpenSSL/1.0.2h PHP/5.6.21 mod_perl/2.0.8-dev Perl/v5.16.3'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/opt/lampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/opt/lampp/htdocs'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/opt/lampp/htdocs/advanced/backend/web/index.php'
+    'REMOTE_PORT' => '36461'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=site%2Flogin'
+    'REQUEST_URI' => '/advanced/backend/web/index.php?r=site%2Flogin'
+    'SCRIPT_NAME' => '/advanced/backend/web/index.php'
+    'PHP_SELF' => '/advanced/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1466022794.444
+    'REQUEST_TIME' => 1466022794
+]
+2016-06-15 22:37:59 [::1][-][2uqvgi7ugli8c5ckuu72nucp67][error][yii\db\Exception] exception 'PDOException' with message 'SQLSTATE[42S02]: Base table or view not found: 1146 Table 'yii2advanced.user' doesn't exist' in /opt/lampp/htdocs/advanced/vendor/yiisoft/yii2/db/Command.php:900
+Stack trace:
+#0 /opt/lampp/htdocs/advanced/vendor/yiisoft/yii2/db/Command.php(900): PDOStatement->execute()
+#1 /opt/lampp/htdocs/advanced/vendor/yiisoft/yii2/db/Command.php(376): yii\db\Command->queryInternal('<span class="st...', '<span class="ke...')
+#2 /opt/lampp/htdocs/advanced/vendor/yiisoft/yii2/db/Query.php(247): yii\db\Command->queryOne()
+#3 /opt/lampp/htdocs/advanced/vendor/yiisoft/yii2/db/ActiveQuery.php(290): yii\db\Query->one('<span class="ke...')
+#4 /opt/lampp/htdocs/advanced/vendor/yiisoft/yii2/db/BaseActiveRecord.php(107): yii\db\ActiveQuery->one()
+#5 /opt/lampp/htdocs/advanced/common/models/User.php(83): yii\db\BaseActiveRecord::findOne('[<span class="s...')
+#6 /opt/lampp/htdocs/advanced/common/models/LoginForm.php(73): common\models\User::findByUsername('<span class="st...')
+#7 /opt/lampp/htdocs/advanced/common/models/LoginForm.php(44): common\models\LoginForm->getUser()
+#8 [internal function]: common\models\LoginForm->validatePassword('<span class="st...', '<span class="ke...')
+#9 /opt/lampp/htdocs/advanced/vendor/yiisoft/yii2/validators/InlineValidator.php(69): call_user_func('[<span class="t...', '<span class="st...', '<span class="ke...')
+#10 /opt/lampp/htdocs/advanced/vendor/yiisoft/yii2/validators/Validator.php(252): yii\validators\InlineValidator->validateAttribute(Object(common\models\LoginForm), '<span class="st...')
+#11 /opt/lampp/htdocs/advanced/vendor/yiisoft/yii2/base/Model.php(356): yii\validators\Validator->validateAttributes(Object(common\models\LoginForm), '[<span class="s...')
+#12 /opt/lampp/htdocs/advanced/common/models/LoginForm.php(58): yii\base\Model->validate()
+#13 /opt/lampp/htdocs/advanced/backend/controllers/SiteController.php(68): common\models\LoginForm->login()
+#14 [internal function]: backend\controllers\SiteController->actionLogin()
+#15 /opt/lampp/htdocs/advanced/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array('[<span class="t...', '[]')
+#16 /opt/lampp/htdocs/advanced/vendor/yiisoft/yii2/base/Controller.php(154): yii\base\InlineAction->runWithParams('[<span class="s...')
+#17 /opt/lampp/htdocs/advanced/vendor/yiisoft/yii2/base/Module.php(454): yii\base\Controller->runAction('<span class="st...', '[<span class="s...')
+#18 /opt/lampp/htdocs/advanced/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('<span class="st...', '[<span class="s...')
+#19 /opt/lampp/htdocs/advanced/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#20 /opt/lampp/htdocs/advanced/backend/web/index.php(18): yii\base\Application->run()
+#21 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[42S02]: Base table or view not found: 1146 Table 'yii2advanced.user' doesn't exist
+The SQL being executed was: SELECT * FROM `user` WHERE (`username`='holi') AND (`status`=10)' in /opt/lampp/htdocs/advanced/vendor/yiisoft/yii2/db/Schema.php:633
+Stack trace:
+#0 /opt/lampp/htdocs/advanced/vendor/yiisoft/yii2/db/Command.php(915): yii\db\Schema->convertException(Object(PDOException), 'SELECT * FROM `...')
+#1 /opt/lampp/htdocs/advanced/vendor/yiisoft/yii2/db/Command.php(376): yii\db\Command->queryInternal('<span class="st...', '<span class="ke...')
+#2 /opt/lampp/htdocs/advanced/vendor/yiisoft/yii2/db/Query.php(247): yii\db\Command->queryOne()
+#3 /opt/lampp/htdocs/advanced/vendor/yiisoft/yii2/db/ActiveQuery.php(290): yii\db\Query->one('<span class="ke...')
+#4 /opt/lampp/htdocs/advanced/vendor/yiisoft/yii2/db/BaseActiveRecord.php(107): yii\db\ActiveQuery->one()
+#5 /opt/lampp/htdocs/advanced/common/models/User.php(83): yii\db\BaseActiveRecord::findOne('[<span class="s...')
+#6 /opt/lampp/htdocs/advanced/common/models/LoginForm.php(73): common\models\User::findByUsername('<span class="st...')
+#7 /opt/lampp/htdocs/advanced/common/models/LoginForm.php(44): common\models\LoginForm->getUser()
+#8 [internal function]: common\models\LoginForm->validatePassword('<span class="st...', '<span class="ke...')
+#9 /opt/lampp/htdocs/advanced/vendor/yiisoft/yii2/validators/InlineValidator.php(69): call_user_func('[<span class="t...', '<span class="st...', '<span class="ke...')
+#10 /opt/lampp/htdocs/advanced/vendor/yiisoft/yii2/validators/Validator.php(252): yii\validators\InlineValidator->validateAttribute(Object(common\models\LoginForm), '<span class="st...')
+#11 /opt/lampp/htdocs/advanced/vendor/yiisoft/yii2/base/Model.php(356): yii\validators\Validator->validateAttributes(Object(common\models\LoginForm), '[<span class="s...')
+#12 /opt/lampp/htdocs/advanced/common/models/LoginForm.php(58): yii\base\Model->validate()
+#13 /opt/lampp/htdocs/advanced/backend/controllers/SiteController.php(68): common\models\LoginForm->login()
+#14 [internal function]: backend\controllers\SiteController->actionLogin()
+#15 /opt/lampp/htdocs/advanced/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array('[<span class="t...', '[]')
+#16 /opt/lampp/htdocs/advanced/vendor/yiisoft/yii2/base/Controller.php(154): yii\base\InlineAction->runWithParams('[<span class="s...')
+#17 /opt/lampp/htdocs/advanced/vendor/yiisoft/yii2/base/Module.php(454): yii\base\Controller->runAction('<span class="st...', '[<span class="s...')
+#18 /opt/lampp/htdocs/advanced/vendor/yiisoft/yii2/web/Application.php(84): yii\base\Module->runAction('<span class="st...', '[<span class="s...')
+#19 /opt/lampp/htdocs/advanced/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#20 /opt/lampp/htdocs/advanced/backend/web/index.php(18): yii\base\Application->run()
+#21 {main}
+Additional Information:
+Array
+(
+    [0] => 42S02
+    [1] => 1146
+    [2] => Table 'yii2advanced.user' doesn't exist
+)
+
+2016-06-15 22:37:59 [::1][-][2uqvgi7ugli8c5ckuu72nucp67][info][application] $_GET = [
+    'r' => 'site/login'
+]
+
+$_POST = [
+    '_csrf' => 'NWlXRnVJMEJGBiA2HAAIB1sFBygvGFQDBAs1Ij85SDNBCBV/MQtfCg=='
+    'LoginForm' => [
+        'username' => 'holi'
+        'password' => 'holi'
+        'rememberMe' => '1'
+    ]
+    'login-button' => ''
+]
+
+$_COOKIE = [
+    'PHPSESSID' => '2uqvgi7ugli8c5ckuu72nucp67'
+    '_csrf' => '9b4c7dfda98eec689bba5a6d7a29a45cdaae89178b46186d7fd5dfadc3d65faaa:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"sowpiI8EnlPnZQdA1bbdJpxqtaB9DBoH\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__captcha/site/captcha' => 'qvnocog'
+    '__captcha/site/captchacount' => 1
+    '__returnUrl' => '/advanced/backend/web/'
+]
+
+$_SERVER = [
+    'UNIQUE_ID' => 'V2G8p38AAQEAABd3CUcAAAAJ'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '196'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_ORIGIN' => 'http://localhost'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_REFERER' => 'http://localhost/advanced/backend/web/index.php?r=site%2Flogin'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'es-419,es;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=2uqvgi7ugli8c5ckuu72nucp67; _csrf=9b4c7dfda98eec689bba5a6d7a29a45cdaae89178b46186d7fd5dfadc3d65faaa%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22sowpiI8EnlPnZQdA1bbdJpxqtaB9DBoH%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'LD_LIBRARY_PATH' => '/opt/lampp/lib:/opt/lampp/lib'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Unix) OpenSSL/1.0.2h PHP/5.6.21 mod_perl/2.0.8-dev Perl/v5.16.3'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/opt/lampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/opt/lampp/htdocs'
+    'SERVER_ADMIN' => 'you@example.com'
+    'SCRIPT_FILENAME' => '/opt/lampp/htdocs/advanced/backend/web/index.php'
+    'REMOTE_PORT' => '36502'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=site%2Flogin'
+    'REQUEST_URI' => '/advanced/backend/web/index.php?r=site%2Flogin'
+    'SCRIPT_NAME' => '/advanced/backend/web/index.php'
+    'PHP_SELF' => '/advanced/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1466023079.889
+    'REQUEST_TIME' => 1466023079
+]
